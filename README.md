@@ -2,6 +2,10 @@
 
 My vagrant environment
 
+## Machine
+
+* ubuntu 18.04
+
 ## Languages
 
 * python

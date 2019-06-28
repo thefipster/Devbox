@@ -3,9 +3,8 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/bionic64"
   config.vm.box_version = "20190503.0.0"
-  config.vm.hostname = "automatica-devbox"
+  config.vm.hostname = "devbox"
   config.ssh.shell = "bash"
-
 
   # plugin needed: vagrant plugin install vagrant-disksize
   config.disksize.size = "20GB"
@@ -21,11 +20,11 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder "../", "/git"
 
   config.vm.provider "virtualbox" do |vb|
-    vb.cpus = "8"
-    vb.memory = "8192"
+    vb.cpus = "4"
+    vb.memory = "5120"
   end
 
   if Vagrant.has_plugin?("vagrant-vbguest")
-    config.vbguest.auto_update = false  
+    config.vbguest.auto_update = false
   end
 end
