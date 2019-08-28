@@ -1,0 +1,4 @@
+# vagrant
+.vagrant
+ubuntu-bionic*.log
+
